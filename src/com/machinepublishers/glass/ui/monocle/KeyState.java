@@ -31,6 +31,8 @@ import com.machinepublishers.glass.ui.monocle.KeyState;
 import com.machinepublishers.glass.ui.monocle.MonocleWindow;
 import com.machinepublishers.glass.ui.monocle.MonocleWindowManager;
 
+import javafx.scene.input.KeyCode;
+
 /**
  * KeyState is a snapshot of pressed keys
  * KeyState is used both to store the current state of key input and to
@@ -49,15 +51,15 @@ class KeyState {
     }
 
     /** Adds a key to the set of pressed keys. */
-    void pressKey(int virtualKeyCode) {
-        keysPressed.addInt(virtualKeyCode);
-        modifiers |= getModifier(virtualKeyCode);
+    void pressKey(KeyCode virtualKeyCode) {
+        keysPressed.addInt(virtualKeyCode.getCode());
+        modifiers |= getModifier(virtualKeyCode.getCode());
     }
 
     /** Removes a key from the set of pressed keys. */
-    void releaseKey(int virtualKeyCode) {
-        keysPressed.removeInt(virtualKeyCode);
-        modifiers &= ~getModifier(virtualKeyCode);
+    void releaseKey(KeyCode virtualKeyCode) {
+        keysPressed.removeInt(virtualKeyCode.getCode());
+        modifiers &= ~getModifier(virtualKeyCode.getCode());
     }
 
     /** Copies the contents of this state object to another.
