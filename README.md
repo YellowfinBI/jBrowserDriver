@@ -5,6 +5,14 @@ Licensed under the Apache License v2.0 ([details](https://raw.githubusercontent.
 
 - - -
 
+## Fork
+
+This fork combines the original MachinePublishers JBrowserDriver v1.1.1 source code with the [Java FX 11 compatability fixes by ArloL](https://github.com/ArloL/jBrowserDriver/tree/jdk11). This is available on branch `java11`.
+
+Additionally, it updates the code to be compatible with newer versions of JavaFX that include [JDK-8299968](https://bugs.openjdk.org/browse/JDK-8299968).
+
+- - -
+
 ## Download
 Get a ZIP archive of a [recent release](https://github.com/MachinePublishers/jBrowserDriver/releases/latest).
 
