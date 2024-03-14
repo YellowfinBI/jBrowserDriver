@@ -193,6 +193,12 @@ final class MonocleWindow extends Window {
         return result;
     }
 
+    // not overriding - JavaFX sources in Maven do not have this method yet
+    //@Override
+    protected void _updateViewSize(long ptr) {
+        // empty - not needed by this implementation
+    }
+
     /**
      * Returns the handle used to create a rendering context in Prism
      */
